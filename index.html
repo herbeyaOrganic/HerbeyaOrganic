@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page | Herbeya</title>
+    <link rel="stylesheet" href="styles.css">
+   
+<body>
+    <header>
+        <h1> Herbeya</h1>
+        
+        <nav>
+            <button id="wishlist-btn">Wishlist (<span id="wishlist-count">0</span>)</button>
+            <button id="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+        </nav>
+     
+           
+            <!-- Rest of your header content -->
+        </header>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Search products..." 
+                    aria-label="Search products"
+                    autocomplete="off"
+                >
+                <button id="search-btn" aria-label="Search">
+                    <svg class="search-icon" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/>
+                    </svg>
+                </button>
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </div>
+    <main>
+        <div id="products-grid" class="pinterest-grid"></div>
+       
+    </main>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-product-content"></div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content cart-modal-content">
+            <span class="close cart-close">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items-container"></div>
+            <div class="cart-summary">
+                <div class="cart-total">Total: $<span id="cart-total-amount">0.00</span></div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div id="wishlist-modal" class="modal">
+        <div class="modal-content wishlist-modal-content">
+            <span class="close wishlist-close">&times;</span>
+            <h2>Your Wishlist</h2>
+            <div id="wishlist-items-container"></div>
+        </div>
+    </div>
+    <!-- Checkout Modal -->
+<div id="checkout-modal" class="modal">
+    <div class="modal-content checkout-modal-content">
+        <span class="close checkout-close">&times;</span>
+        <h2>Complete Your Order</h2>
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="full-name">Full Name*</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Street Address*</label>
+                <textarea id="address" name="address" rows="2" required></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="city">City*</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="province">Province*</label>
+                    <input type="text" id="province" name="province" required>
+                </div>
+            </div>
+            
+            <div class="form-group payment-method">
+                <label>Payment Method</label>
+                <div class="payment-option">
+                    <input type="radio" id="cod" name="payment" value="Advance Payment" checked>
+                    <label for="cod">Cash on Delivery</label>
+                </div>
+            </div>
+            
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="checkout-items"></div>
+                <div class="order-total">
+                    <span>Total:</span>
+                    <span id="checkout-total">$0.00</span>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Place Order</button>
+        </form>
+    </div>
+</div>
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script src="wishlist.js"></script>
+    <script src="product.js"></script>
+    <script src="checkout.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
