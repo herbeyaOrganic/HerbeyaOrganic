@@ -5,21 +5,21 @@ window.App = {
             id: 1,
             title: "Herbeya organic hair oil 100ml bottle",
             price: 650,
-            image: "/Gemini_Generated_Image_8z0t298z0t298z0t_1.png",
+            image: "./Gemini_Generated_Image_8z0t298z0t298z0t_1.png",
             description: "Herbeya organic hair oil Reduces hairfall, frizz, dandruff  Enhances hair growth, shine."
         },
         {
             id: 2,
             title: "Sugar scrub (250g)",
             price: 250,
-            image: "/Gemini_Generated_Image_c9jedvc9jedvc9je_1.png",
+            image: "./Gemini_Generated_Image_c9jedvc9jedvc9je_1.png",
             description: "Sugar scrub Exfoliates skin, provide Sugar scrub, softness, baby skin No dullness, darkness, tanning."
         },
         {
             id: 3,
             title: "Rice milk soap (small size)",
             price: 200,
-            image: "/Gemini_Generated_Image_wcful7wcful7wcfu_1.png",
+            image: "./Gemini_Generated_Image_wcful7wcful7wcfu_1.png",
             description: "Rice milk soap Provide glow, whitening special soap Freshen skin and moisturizes dry skin."
         },
         
@@ -42,6 +42,7 @@ if (document.getElementById('search-input')) {
         if (window.searchCleanup) window.searchCleanup();
     });
 }
+
 
 
 
